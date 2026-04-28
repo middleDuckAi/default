@@ -48,7 +48,7 @@ For a local preset checkout during preset development:
 ```bash
 evo install /tmp/default-preset-check \
   --branch=3.5.x \
-  --preset=/Users/dmi3yy/PhpstormProjects/Extras/Presets/default
+  --preset=/path/to/default-preset
 ```
 
 Choose "No" on the Extras prompt when you want a clean default-project baseline.
@@ -71,11 +71,11 @@ evo install /path/to/my-site \
   --preset=evolution-cms-presets/default
 ```
 
-For local installer development from `/Users/dmi3yy/PhpstormProjects/Extras/installer`:
+For local installer development from an installer checkout:
 
 ```bash
-cd /Users/dmi3yy/PhpstormProjects/Extras/installer
-go run ./cmd/evo install /Users/dmi3yy/PhpstormProjects/Extras/dmi3yy.com \
+cd /path/to/installer
+go run ./cmd/evo install /path/to/my-site \
   --cli \
   --branch=3.5.x \
   --db-type=sqlite \
@@ -88,7 +88,7 @@ go run ./cmd/evo install /Users/dmi3yy/PhpstormProjects/Extras/dmi3yy.com \
   --preset=evolution-cms-presets/default
 ```
 
-`evolution-cms-presets/default` is the preset source. The target project can still be committed and pushed as its own repository, for example `dmi3yy/dmi3yy.com`.
+`evolution-cms-presets/default` is the preset source. The target project can still be committed and pushed as its own repository.
 
 For local preset development, point the installer at the preset checkout:
 
@@ -103,7 +103,7 @@ go run ./cmd/evo install /tmp/default-preset-check \
   --admin-password=change-me \
   --admin-directory=manager \
   --language=uk \
-  --preset=/Users/dmi3yy/PhpstormProjects/Extras/Presets/default
+  --preset=/path/to/default-preset
 ```
 
 Use `--preset=evolution-cms-presets/default@dev` when you want the installer to pull a development branch or tag from GitHub.
