@@ -10,7 +10,6 @@ core/custom/
   composer.json
   config/
     cms/settings/ControllerNamespace.php
-    tracy/active.php
   packages/default/src/
     composer.json
     DefaultServiceProvider.php
